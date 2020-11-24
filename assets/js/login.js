@@ -37,7 +37,7 @@ $(function () {
         // return
         $.ajax({
             type: 'POST',
-            url: 'http://ajax.frontend.itheima.net/api/reguser',
+            url: '/api/reguser',
             data,
             success: function (res) {
                 console.log(res);
@@ -55,7 +55,7 @@ $(function () {
         // console.log(data);
         $.ajax({
             type: 'POST',
-            url: 'http://ajax.frontend.itheima.net/api/login',
+            url: '/api/login',
             data,
             success: function (res) {
                 console.log(res);
