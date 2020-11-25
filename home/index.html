@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>后台系统</title>
+    <script>
+        let token = localStorage.getItem("token");
+        if (!token) {
+            location.href = 'login.html';
+        }
+    </script>
     <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
     <link rel="stylesheet" href="/assets/fonts/iconfont.css">
     <link rel="stylesheet" href="/assets/css/index.css">
@@ -61,8 +67,10 @@
                         <dl class="layui-nav-child">
                             <dd><a href="/user/user_info.html" target="layBody"><i
                                         class="layui-icon layui-icon-app"></i>基本资料</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
-                            <dd><a href=""><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
+                            <dd><a href="/user/user_avatar.html" target="layBody"><i
+                                        class="layui-icon layui-icon-app"></i>更换头像</a></dd>
+                            <dd><a href="/user/user_pwd.html" target="layBody"><i
+                                        class="layui-icon layui-icon-app"></i>重置密码</a></dd>
                         </dl>
                     </li>
                 </ul>
@@ -73,7 +81,7 @@
             <!-- 内容主体区域 -->
 
             <!-- <iframe src="/home/dashboard.html" name="layBody" frameborder="0"></iframe> -->
-            <iframe src="/user/user_info.html" name="layBody" frameborder="0"></iframe>
+            <iframe src="/user/user_avatar.html" name="layBody" frameborder="0"></iframe>
 
         </div>
 
